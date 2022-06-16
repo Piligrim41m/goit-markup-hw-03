@@ -5,6 +5,7 @@
   --white-color: #ffffff;
   --alternative-white-color: #F5F4FA;
   --grey-fon-color: #2f303a;
+  --border-color: #eeeeee;
 
 }
 body {
@@ -14,16 +15,33 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
-.list {
+ul {
   list-style: none;
 }
+
 .link {
-  font-family: inherit;
   text-decoration: none;
+  font-family: inherit;
   line-height: 1.14em;
   letter-spacing: 0.02em;
 }
+.container {  
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 /* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .menu-nav {
+    display: flex;
+    align-items: center;
+  }
 
 .logo {
   font-family: 'Raleway';
@@ -36,20 +54,34 @@ body {
 .logo-text {
   color: #000000;
 }
+.item {
+  padding-left: 50px;
+}
 /* ste-nav */
 
-.site-nav .link {
+.site-nav{
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-link {
   font-weight: 500;
   color: var(--title-text-color);
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-link:hover,
+.site-link:focus {
   color: var(--accent-color);
 }
-.site-nav .current {
+.current {
   color: var(--accent-color);
 }
 /* out-nav */
+
+.out-nav {
+  display: flex;
+}
+
 .out-nav .link {
   font-weight: 500;
   color: var(--primary-text-color);
@@ -62,10 +94,15 @@ body {
 /* main */
 
 /* Studio */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  }
 .hero {
   background: var(--grey-fon-color);
   color: var(--white-color);
-}
+  
+  }
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -74,6 +111,11 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   width: 700px;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+.btn-position {
+  text-align: center;
 }
 .hero-btn {
   font-family: inherit;
@@ -87,6 +129,8 @@ body {
   color: var(--white-color);
   cursor: pointer;
   border-style: none;
+  margin-top: 30px;
+  margin-bottom: 200px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -97,6 +141,15 @@ body {
   font-size: 36px;
   line-height: 1.16em;
   color: var(--title-text-color);
+  margin: 0 auto;
+  text-align: center;
+}
+.feature-list {
+  padding: 0;
+  display: flex;
+}
+.feature-item {
+  width: 270px;
 }
 .feature-title {
   font-weight: 700;
@@ -107,6 +160,15 @@ body {
 }
 .feature-descr {
   line-height: 1.46em;
+}
+.work {
+  padding-top: 0;
+}
+.work-list,
+.team-list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 .team {
   background-color: var(--alternative-white-color);
@@ -121,20 +183,29 @@ body {
   font-size: 16px;
   line-height: 1.1875em;
   color: var(--title-text-color);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 .team-descr {
   font-size: 16px;
   line-height: 1.1875em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
 }
 /* footer */
 .footer {
   background: var(--grey-fon-color);
+  padding: 60px 0;
 }
 .footer-text{
   color: var(--white-color);
 }
 .addres {
   font-style: normal;
+  padding-left: 0;
 }
 .addres-link {
   line-height: 1.71em;
@@ -159,6 +230,16 @@ body {
 
 /* portfolio */
 
+.filter-list {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 50px;
+}
+.filter-item {
+  margin-left: 8px;
+}
+
 .filter-btn {
   font-family: inherit;
   background: var(--alternative-white-color);
@@ -176,20 +257,37 @@ body {
  background: var(--accent-color);
  color: var(--white-color);
 }
-
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+}
+.portfolio-item{
+  box-sizing: border-box;
+  width: 370px;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-top: none;
+}
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2em;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+  padding-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 .portfolio-descr {
   line-height: 1.875em;
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
-  
+  padding-left: 24px;
+  margin: 4px 0 0;
+  padding-bottom: 20px;
 
 }
 
