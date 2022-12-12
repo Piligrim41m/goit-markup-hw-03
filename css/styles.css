@@ -4,7 +4,7 @@
   --accent-color: #2196f3;
   --white-color: #ffffff;
   --alternative-white-color: #F5F4FA;
-  --grey-fon-color: #2f303a;
+  --grey-fon-color: #2F303A;
   --border-color: #eeeeee;
   --line-color: #ececec;
 }
@@ -129,7 +129,7 @@ img {
 
 /* Studio */
 .hero {
-  background: var(--grey-fon-color);
+  background-color: var(--grey-fon-color);
   padding: 200px 0;
 }
 
